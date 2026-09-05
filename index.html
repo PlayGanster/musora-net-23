@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мусора Нет 23 — Вывоз мусора в Краснодаре</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="#1a3a7a"/>
+                            <path d="M8 28h24v-8H8v8zm2-6h20v4H10v-4z" fill="white"/>
+                            <circle cx="14" cy="30" r="3" fill="white"/>
+                            <circle cx="26" cy="30" r="3" fill="white"/>
+                            <path d="M12 22l4-8h8l4 8" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-musora">Мусора</span>
+                        <span class="logo-net">Нет <strong>23</strong></span>
+                    </div>
+                </div>
+                <div class="header-separator"></div>
+                <div class="header-location">
+                    <div class="icon-badge">
+                        <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/>
+                        </svg>
+                    </div>
+                    <span>Краснодар<br>и пригород</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-phone-block">
+                    <div class="icon-badge">
+                        <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                            <path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="#ff6b2b"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <a href="tel:+79261234567" class="header-phone">+7 (926) 123-45-67</a>
+                        <span class="header-hours">Ежедневно с 8:00 до 20:00</span>
+                    </div>
+                </div>
+                <button class="burger" id="burgerBtn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="header-actions">
+                    <a href="#" class="social-circle whatsapp" title="WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-circle telegram" title="Telegram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0088cc">
+                            <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        </svg>
+                    </a>
+                    <a href="tel:+79261234567" class="btn-call">Позвоните мне</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#">Строительный мусор</a></li>
+                <li><a href="#">Старая мебель</a></li>
+                <li><a href="#">После ремонта</a></li>
+                <li><a href="#">Бытовой мусор</a></li>
+                <li><a href="#">С дачи</a></li>
+                <li><a href="#">Демонтаж</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Мобильное меню (добавить после nav) -->
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
+    <aside class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="8" fill="#1a3a7a"/>
+                        <path d="M8 28h24v-8H8v8zm2-6h20v4H10v-4z" fill="white"/>
+                        <circle cx="14" cy="30" r="3" fill="white"/>
+                        <circle cx="26" cy="30" r="3" fill="white"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-musora">Мусора</span>
+                    <span class="logo-net">Нет <strong>23</strong></span>
+                </div>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 6l12 12M18 6L6 18" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#">Строительный мусор</a>
+            <a href="#">Старая мебель</a>
+            <a href="#">После ремонта</a>
+            <a href="#">Бытовой мусор</a>
+            <a href="#">С дачи</a>
+            <a href="#">Демонтаж</a>
+            <a href="#">Контакты</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-location">
+                <div class="icon-badge">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/>
+                    </svg>
+                </div>
+                <span>Краснодар и пригород</span>
+            </div>
+            <div class="mobile-menu-phone-block">
+                <div class="icon-badge">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="#ff6b2b"/>
+                    </svg>
+                </div>
+                <div>
+                    <a href="tel:+79261234567" class="mobile-menu-phone">+7 (926) 123-45-67</a>
+                    <span class="mobile-menu-hours">Ежедневно с 8:00 до 20:00</span>
+                </div>
+            </div>
+            <div class="mobile-menu-socials">
+                <a href="#" class="social-link whatsapp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" class="social-link telegram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#0088cc">
+                        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Sticky мобильная кнопка звонка -->
+    <div class="mobile-sticky-call">
+        <a href="tel:+79261234567" class="mobile-sticky-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.375 1.25C3.34 1.25 2.5 2.09 2.5 3.125c0 7.6 6.15 13.75 13.75 13.75 1.035 0 1.875-.84 1.875-1.875 0-.49-.19-.93-.5-1.26l-1.875-1.875c-.35-.35-.91-.35-1.26 0l-1.36 1.36A10.06 10.06 0 016.76 7.01l1.36-1.36c.35-.35.35-.91 0-1.26L6.25 2.52A1.86 1.86 0 005 1.875 1.875 1.875 0 004.375 1.25z" fill="white"/>
+            </svg>
+            Позвонить
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-title">Вывезу мусор<br>из квартиры, дома<br>и с дачи в Краснодаре</h1>
+                <p class="hero-subtitle">Быстро, аккуратно и без<br>лишних хлопот</p>
+                <ul class="hero-features">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="10" fill="#1a3a7a"/>
+                            <path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Приезжаю сам, без посредников
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="10" fill="#1a3a7a"/>
+                            <path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Грузчики и машина включены
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="10" fill="#1a3a7a"/>
+                            <path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Честная цена без скрытых доплат
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="10" fill="#1a3a7a"/>
+                            <path d="M6 10l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Экологичная утилизация
+                    </li>
+                </ul>
+                <div class="hero-cta">
+                    <a href="tel:+79261234567" class="hero-phone">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4.375 1.25C3.34 1.25 2.5 2.09 2.5 3.125c0 7.6 6.15 13.75 13.75 13.75 1.035 0 1.875-.84 1.875-1.875 0-.49-.19-.93-.5-1.26l-1.875-1.875c-.35-.35-.91-.35-1.26 0l-1.36 1.36A10.06 10.06 0 016.76 7.01l1.36-1.36c.35-.35.35-.91 0-1.26L6.25 2.52A1.86 1.86 0 005 1.875 1.875 1.875 0 004.375 1.25z" fill="#1a3a7a"/>
+                        </svg>
+                        +7 (926) 123-45-67
+                    </a>
+                    <a href="#" class="btn-primary">Заказать расчет</a>
+                </div>
+                <div class="hero-badge">
+                    <div class="hero-badge-icon">
+                        <svg width="48" height="48" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="14" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M10 16l4 4 8-8" stroke="#1a3a7a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="hero-badge-text">
+                        <strong>Работаю честно</strong>
+                        <span>Без скрытых доплат</span>
+                        <span>и переплат</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Row -->
+    <section class="features-row">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <circle cx="18" cy="18" r="16" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M18 10v8l5 3" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Приезжаю быстро</strong>
+                        <span>от 30 минут</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path d="M18 4L4 12v10c0 7.73 6 13.27 14 14 8-.73 14-6.27 14-14V12L18 4z" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M12 18l4 4 8-8" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Честная цена</strong>
+                        <span>без скрытых доплат</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <circle cx="18" cy="12" r="6" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M8 30c0-5.52 4.48-10 10-10s10 4.48 10 10" stroke="#1a3a7a" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Без посредников</strong>
+                        <span>работаю сам</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path d="M18 6c-6 0-10 4-10 10 0 8 10 16 10 16s10-8 10-16c0-6-4-10-10-10z" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M14 18c2-2 4-2 6 0" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Экологичная утилизация</strong>
+                        <span>забочусь о природе</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <rect x="6" y="8" width="24" height="22" rx="2" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M6 14h24" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M12 4v6M24 4v6" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="18" cy="22" r="3" stroke="#1a3a7a" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="feature-text">
+                        <strong>Удобное время</strong>
+                        <span>подстроюсь под вас</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Что я вывожу</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder construction"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Строительный мусор</h3>
+                        <p>Кирпич, бетон, штукатурка, мешки и другой строительный мусор</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>2 500</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder furniture"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Старая мебель</h3>
+                        <p>Диваны, шкафы, кровати, столы и другая мебель</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>2 000</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder renovation"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Мусор после ремонта</h3>
+                        <p>Остатки стройматериалов, упаковка, пыль и прочее</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>2 300</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder household"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Бытовой мусор</h3>
+                        <p>Хлам из квартиры, дома, гаража, кладовки и подобное</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>1 800</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder dacha"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Мусор с дачи и участка</h3>
+                        <p>Ветки, доски, ботва, старая теплица и разный мусор</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>2 400</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img">
+                        <div class="service-img-placeholder demolition"></div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Демонтаж и вывоз мусора</h3>
+                        <p>Демонтаж перегородок, мебели, покрытий и вывоз мусора</p>
+                    </div>
+                    <div class="service-price">
+                        от <strong>3 500</strong> ₽
+                    </div>
+                    <a href="#" class="btn-order">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как я работаю</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="6" width="24" height="30" rx="2" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M10 14h12M10 20h12M10 26h8" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M28 20l6 6-6 6" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <strong>1. Заявка</strong>
+                        <span>Вы оставляете заявку или звоните мне</span>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="8" y="4" width="24" height="32" rx="2" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M14 12h12M14 18h12M14 24h8" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="28" cy="28" r="6" fill="#1a3a7a"/>
+                            <path d="M26 28l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <strong>2. Расчет</strong>
+                        <span>Говорю стоимость и согласуем детали</span>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="12" width="20" height="14" rx="2" stroke="#1a3a7a" stroke-width="2"/>
+                            <circle cx="10" cy="28" r="3" stroke="#1a3a7a" stroke-width="2"/>
+                            <circle cx="20" cy="28" r="3" stroke="#1a3a7a" stroke-width="2"/>
+                            <path d="M24 16h8l4 6v4h-12" stroke="#1a3a7a" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <strong>3. Приезжаю</strong>
+                        <span>Приезжаю вовремя с грузчиками</span>
+                    </div>
+                </div>
+                <div class="step-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke="#1a3a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8l4-8z" fill="#1a3a7a" opacity="0.1"/>
+                            <path d="M14 22l4 4 8-8" stroke="#1a3a7a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <strong>4. Вывоз и уборка</strong>
+                        <span>Вывожу мусор и убираю за собой</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <div class="avatar-placeholder male">А</div>
+                        </div>
+                        <div class="review-author">
+                            <strong>Алексей</strong>
+                            <div class="review-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">Быстро приехал и помог вывезти строительный мусор. Цена адекватная, рекомендую!</p>
+                    <span class="review-date">10 мая 2024</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <div class="avatar-placeholder female">М</div>
+                        </div>
+                        <div class="review-author">
+                            <strong>Марина</strong>
+                            <div class="review-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">Вывозили старую мебель после ремонта. Всё аккуратно и по честной цене. Спасибо!</p>
+                    <span class="review-date">7 мая 2024</span>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">
+                            <div class="avatar-placeholder male">И</div>
+                        </div>
+                        <div class="review-author">
+                            <strong>Игорь</strong>
+                            <div class="review-stars">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">Отличная работа! Приехал в оговоренное время, помог с погрузкой. Буду обращаться ещё.</p>
+                    <span class="review-date">1 мая 2024</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-inner">
+            <div class="cta-content">
+                <h2>Оставьте заявку<br>и я перезвоню за 5 минут</h2>
+                <form class="cta-form">
+                    <input type="tel" placeholder="Ваш номер телефона" class="cta-input">
+                    <button type="submit" class="btn-primary">Заказать звонок</button>
+                </form>
+                <p class="cta-privacy">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <rect x="3" y="7" width="10" height="7" rx="1" stroke="#999" stroke-width="1.5"/>
+                        <path d="M5 7V5a3 3 0 016 0v2" stroke="#999" stroke-width="1.5"/>
+                    </svg>
+                    Ваши данные в безопасности и не передаются третьим лицам
+                </p>
+            </div>
+            <div class="cta-image">
+                <div class="cta-worker-placeholder">
+                    <div class="worker-illustration">
+                        <div class="wi-head"></div>
+                        <div class="wi-body"></div>
+                        <div class="wi-arm wi-arm-left"></div>
+                        <div class="wi-arm wi-arm-right"></div>
+                        <div class="wi-legs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map / Areas -->
+    <section class="areas-section">
+        <div class="container">
+            <div class="map-placeholder">
+                <div class="map-pin">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path d="M20 4C13.37 4 8 9.37 8 16c0 9.38 12 20 12 20s12-10.62 12-20c0-6.63-5.37-12-12-12zm0 16a4 4 0 110-8 4 4 0 010 8z" fill="#1a3a7a"/>
+                    </svg>
+                </div>
+                <div class="map-label">Работаю по Краснодару и пригородам</div>
+            </div>
+            <div class="areas-grid">
+                <button class="area-btn">Центральный</button>
+                <button class="area-btn">Фестивальный</button>
+                <button class="area-btn">Юбилейный</button>
+                <button class="area-btn">Прикубанский</button>
+                <button class="area-btn">Пашковский</button>
+                <button class="area-btn">Западный обход</button>
+                <button class="area-btn">Музыкальный</button>
+                <button class="area-btn">Черемушки</button>
+                <button class="area-btn">Комсомольский</button>
+                <button class="area-btn">ГМР</button>
+                <button class="area-btn">Российский</button>
+                <button class="area-btn">Славянский</button>
+                <button class="area-btn">Энка</button>
+                <button class="area-btn">ККБ</button>
+                <button class="area-btn">Гидрострой</button>
+                <button class="area-btn">Немецкая деревня</button>
+                <button class="area-btn">Яблоновский</button>
+                <button class="area-btn">Новая Адыгея</button>
+                <button class="area-btn">и другие районы</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="#1a3a7a"/>
+                            <path d="M8 28h24v-8H8v8zm2-6h20v4H10v-4z" fill="white"/>
+                            <circle cx="14" cy="30" r="3" fill="white"/>
+                            <circle cx="26" cy="30" r="3" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-musora">Мусора</span>
+                        <span class="logo-net">Нет <strong>23</strong></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-phone-block">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="white"/>
+                    </svg>
+                    <div>
+                        <a href="tel:+79261234567" class="footer-phone">+7 (926) 123-45-67</a>
+                        <span class="footer-hours">Ежедневно с 8:00 до 20:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link-footer whatsapp" title="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="#" class="social-link-footer telegram" title="Telegram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <span>© 2024 Мусора Нет 23</span>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Согласие на обработку данных</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
