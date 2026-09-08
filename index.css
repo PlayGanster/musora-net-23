@@ -1617,6 +1617,14 @@ ul {
         font-size: 20px;
     }
 
+    .slider-prev {
+        left: 8px;
+    }
+
+    .slider-next {
+        right: 8px;
+    }
+
     .cta-inner {
         flex-direction: column;
         text-align: center;
