@@ -37,9 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (track && prevBtn && nextBtn) {
         let position = 0;
         function getVisible() {
-            const w = window.innerWidth;
-            if (w <= 768) return 1;
-            if (w <= 1024) return 2;
             return 3;
         }
         function slide(dir) {

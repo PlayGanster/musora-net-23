@@ -625,14 +625,22 @@ ul {
 
 .reviews-slider {
     position: relative;
+}
+
+.reviews-top {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.reviews-arrows {
+    display: flex;
+    gap: 12px;
 }
 
 .reviews-viewport {
     overflow: hidden;
-    flex: 1;
 }
 
 .reviews-track {
@@ -1341,10 +1349,6 @@ ul {
         flex: 1 1 calc(50% - 8px);
     }
 
-    .review-card {
-        min-width: calc(50% - 12px);
-    }
-
     .service-item {
         flex: 1 1 calc(50% - 12px);
     }
@@ -1489,10 +1493,6 @@ ul {
     .step-item {
         flex: 1 1 calc(50% - 6px);
         padding: 20px 12px;
-    }
-
-    .review-card {
-        min-width: 100%;
     }
 
     .cta-inner {
