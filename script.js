@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.querySelector('.slider-next');
     if (track && prevBtn && nextBtn) {
         let position = 0;
+        function getCards() {
+            return Array.from(track.querySelectorAll('.review-card:not(.review-card--dummy)'));
+        }
         function getVisible() {
             const w = window.innerWidth;
             if (w <= 768) return 1;
@@ -43,23 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
             return 3;
         }
         function getMaxPos() {
-            return Math.max(0, track.children.length - getVisible());
+            return Math.max(0, getCards().length - getVisible());
         }
         function slide(dir) {
             position = Math.max(0, Math.min(position + dir, getMaxPos()));
-            const card = track.children[0];
+            const card = getCards()[0];
             const gap = 24;
             const cardW = card.offsetWidth + gap;
-            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
+            const dummy = track.querySelector('.review-card--dummy');
+            const offset = dummy ? dummy.offsetWidth + gap : 0;
+            track.style.transform = 'translateX(-' + (offset + position * cardW) + 'px)';
         }
         prevBtn.addEventListener('click', function() { slide(-1); });
         nextBtn.addEventListener('click', function() { slide(1); });
         window.addEventListener('resize', function() {
             position = Math.min(position, getMaxPos());
-            const card = track.children[0];
+            const card = getCards()[0];
             const gap = 24;
             const cardW = card.offsetWidth + gap;
-            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
+            const dummy = track.querySelector('.review-card--dummy');
+            const offset = dummy ? dummy.offsetWidth + gap : 0;
+            track.style.transform = 'translateX(-' + (offset + position * cardW) + 'px)';
         });
 
         // Touch swipe

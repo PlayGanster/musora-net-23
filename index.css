@@ -634,6 +634,7 @@ ul {
 
 .reviews-viewport {
     overflow: hidden;
+    padding: 0 52px;
 }
 
 .reviews-track {
@@ -648,6 +649,13 @@ ul {
     padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+}
+
+.review-card--dummy {
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: none;
 }
 
 .slider-arrow {
