@@ -621,6 +621,7 @@ ul {
 .reviews {
     padding: 50px 0;
     background: var(--bg-light);
+    overflow: hidden;
 }
 
 .reviews-slider {
@@ -1615,6 +1616,14 @@ ul {
         width: 36px;
         height: 36px;
         font-size: 20px;
+    }
+
+    .slider-prev {
+        left: 8px;
+    }
+
+    .slider-next {
+        right: 8px;
     }
 
     .cta-inner {
