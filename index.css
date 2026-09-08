@@ -671,11 +671,11 @@ ul {
 }
 
 .slider-prev {
-    left: -44px;
+    left: -60px;
 }
 
 .slider-next {
-    right: -44px;
+    right: -60px;
 }
 
 .slider-arrow:hover {
