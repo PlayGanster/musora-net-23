@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Area buttons — OpenLayers map with polygons
+    // Area buttons — Yandex Maps iframe
+    var mapFrame = document.getElementById('yandex-map');
     var mapFade = document.getElementById('mapFade');
     var mapPopup = document.getElementById('mapPopup');
     var popupAreaName = document.getElementById('popupAreaName');
@@ -124,82 +125,26 @@ document.addEventListener('DOMContentLoaded', function() {
     var areasGrid = document.getElementById('areasGrid');
 
     var areas = [
-        { name: 'Центральный',        lat: 45.0355, lng: 38.9753, zoom: 14, r: 0.018, desc: 'Сервисный центр, парки и скверы — вывоз мусора от жилых домов и офисов' },
-        { name: 'Фестивальный',       lat: 45.0100, lng: 39.0200, zoom: 14, r: 0.015, desc: 'Новый микрорайон — вывоз строительного и бытового мусора' },
-        { name: 'Юбилейный',          lat: 45.0500, lng: 39.0100, zoom: 14, r: 0.015, desc: 'Спальный район — регулярный вывоз и разбор завалов' },
-        { name: 'Прикубанский',       lat: 45.0200, lng: 38.9500, zoom: 14, r: 0.018, desc: 'Промзона и жильё — работаем с объёмным мусором' },
-        { name: 'Пашковский',         lat: 45.0000, lng: 38.9800, zoom: 14, r: 0.018, desc: 'Пригород — вывоз на дачах и частном секторе' },
-        { name: 'Западный обход',     lat: 45.0400, lng: 38.9200, zoom: 13, r: 0.022, desc: 'Промышленная зона вдоль трассы — крупные объёмы' },
-        { name: 'Музыкальный',        lat: 45.0300, lng: 38.9600, zoom: 14, r: 0.012, desc: 'Исторический центр — аккуратный вывоз вручную' },
-        { name: 'Черемушки',          lat: 45.0600, lng: 38.9800, zoom: 14, r: 0.015, desc: 'Микрорайон у парка — вывоз после ремонта и капремонта' },
-        { name: 'Комсомольский',      lat: 45.0150, lng: 39.0000, zoom: 14, r: 0.015, desc: 'Жилой район — бытовой и строительный мусор' },
-        { name: 'ГМР',                lat: 45.0250, lng: 38.9400, zoom: 14, r: 0.015, desc: 'Заводская зона — промышленные отходы и контейнеры' },
-        { name: 'Российский',         lat: 45.0450, lng: 38.9900, zoom: 14, r: 0.015, desc: 'Новый жилой комплекс — вывоз после отделки' },
-        { name: 'Славянский',         lat: 45.0550, lng: 38.9500, zoom: 14, r: 0.018, desc: 'Тихий район у реки — бытовой мусор и садовые отходы' },
-        { name: 'Энка',               lat: 45.0350, lng: 38.9300, zoom: 14, r: 0.015, desc: 'Промзона и склады — вывоз паллет, картона, упаковки' },
-        { name: 'ККБ',                lat: 45.0400, lng: 38.9600, zoom: 14, r: 0.012, desc: 'Около больницы — чистые подъезды и территории' },
-        { name: 'Гидрострой',         lat: 45.0100, lng: 38.9400, zoom: 14, r: 0.015, desc: 'Посёлок у канала — вывоз с частных домов' },
-        { name: 'Немецкая деревня',   lat: 45.0050, lng: 38.9700, zoom: 14, r: 0.012, desc: 'Исторический район — деликатный вывоз без повреждений' },
-        { name: 'Яблоновский',        lat: 44.9800, lng: 38.9900, zoom: 14, r: 0.018, desc: 'Пригород — вывоз на дачах, участках и стройках' },
-        { name: 'Новая Адыгея',       lat: 44.9700, lng: 39.0200, zoom: 14, r: 0.015, desc: 'Микрорайон — бытовой и строительный мусор' },
-        { name: 'и другие районы',    lat: 45.0355, lng: 38.9753, zoom: 11, r: 0.06,  desc: 'Работаю по всему Краснодару и пригородам' }
+        { name: 'Центральный',        lat: '45.0355', lng: '38.9753', zoom: '13', desc: 'Сервисный центр, парки и скверы — вывоз мусора от жилых домов и офисов' },
+        { name: 'Фестивальный',       lat: '45.0100', lng: '39.0200', zoom: '13', desc: 'Новый микрорайон — вывоз строительного и бытового мусора' },
+        { name: 'Юбилейный',          lat: '45.0500', lng: '39.0100', zoom: '13', desc: 'Спальный район — регулярный вывоз и разбор завалов' },
+        { name: 'Прикубанский',       lat: '45.0200', lng: '38.9500', zoom: '13', desc: 'Промзона и жильё — работаем с объёмным мусором' },
+        { name: 'Пашковский',         lat: '45.0000', lng: '38.9800', zoom: '13', desc: 'Пригород — вывоз на дачах и частном секторе' },
+        { name: 'Западный обход',     lat: '45.0400', lng: '38.9200', zoom: '12', desc: 'Промышленная зона вдоль трассы — крупные объёмы' },
+        { name: 'Музыкальный',        lat: '45.0300', lng: '38.9600', zoom: '13', desc: 'Исторический центр — аккуратный вывоз вручную' },
+        { name: 'Черемушки',          lat: '45.0600', lng: '38.9800', zoom: '13', desc: 'Микрорайон у парка — вывоз после ремонта и капремонта' },
+        { name: 'Комсомольский',      lat: '45.0150', lng: '39.0000', zoom: '13', desc: 'Жилой район — бытовой и строительный мусор' },
+        { name: 'ГМР',                lat: '45.0250', lng: '38.9400', zoom: '13', desc: 'Заводская зона — промышленные отходы и контейнеры' },
+        { name: 'Российский',         lat: '45.0450', lng: '38.9900', zoom: '13', desc: 'Новый жилой комплекс — вывоз после отделки' },
+        { name: 'Славянский',         lat: '45.0550', lng: '38.9500', zoom: '13', desc: 'Тихий район у реки — бытовой мусор и садовые отходы' },
+        { name: 'Энка',               lat: '45.0350', lng: '38.9300', zoom: '13', desc: 'Промзона и склады — вывоз паллет, картона, упаковки' },
+        { name: 'ККБ',                lat: '45.0400', lng: '38.9600', zoom: '13', desc: 'Около больницы — чистые подъезды и территории' },
+        { name: 'Гидрострой',         lat: '45.0100', lng: '38.9400', zoom: '13', desc: 'Посёлок у канала — вывоз с частных домов' },
+        { name: 'Немецкая деревня',   lat: '45.0050', lng: '38.9700', zoom: '13', desc: 'Исторический район — деликатный вывоз без повреждений' },
+        { name: 'Яблоновский',        lat: '44.9800', lng: '38.9900', zoom: '13', desc: 'Пригород — вывоз на дачах, участках и стройках' },
+        { name: 'Новая Адыгея',       lat: '44.9700', lng: '39.0200', zoom: '13', desc: 'Микрорайон — бытовой и строительный мусор' },
+        { name: 'и другие районы',    lat: '45.0355', lng: '38.9753', zoom: '11', desc: 'Работаю по всему Краснодару и пригородам' }
     ];
-
-    // Generate polygon points (irregular circle)
-    function makeCoords(lat, lng, radius, points) {
-        var coords = [];
-        var seed = lat * 1000 + lng;
-        for (var i = 0; i < points; i++) {
-            var angle = (2 * Math.PI / points) * i;
-            var jitter = 0.75 + 0.5 * Math.sin(seed * (i + 1) * 7.3);
-            var r = radius * jitter;
-            coords.push(ol.proj.fromLonLat([
-                lng + r * Math.cos(angle),
-                lat + r * Math.sin(angle)
-            ]));
-        }
-        coords.push(coords[0].slice()); // close polygon
-        return coords;
-    }
-
-    // Polygon style
-    var polyStyle = new ol.style.Style({
-        stroke: new ol.style.Stroke({ color: '#ff6b2b', width: 2.5 }),
-        fill: new ol.style.Fill({ color: 'rgba(255,107,43,0.18)' })
-    });
-
-    // Marker style (circle)
-    var markerStyle = new ol.style.Style({
-        image: new ol.style.Circle({
-            radius: 7,
-            fill: new ol.style.Fill({ color: '#ff6b2b' }),
-            stroke: new ol.style.Stroke({ color: '#fff', width: 3 })
-        })
-    });
-
-    // Vector layers
-    var polySource = new ol.source.Vector();
-    var polyLayer = new ol.layer.Vector({ source: polySource, style: polyStyle, zIndex: 10 });
-
-    var markerSource = new ol.source.Vector();
-    var markerLayer = new ol.layer.Vector({ source: markerSource, style: markerStyle, zIndex: 11 });
-
-    // Init map
-    var map = new ol.Map({
-        target: 'ol-map',
-        layers: [
-            new ol.layer.Tile({ source: new ol.source.OSM() }),
-            polyLayer,
-            markerLayer
-        ],
-        view: new ol.View({
-            center: ol.proj.fromLonLat([38.9753, 45.0355]),
-            zoom: 12
-        }),
-        controls: ol.control.defaults.defaults({ attribution: false }).extend([
-            new ol.control.Zoom({ className: 'ol-zoom-custom' })
-        ])
-    });
 
     function switchArea(idx) {
         var area = areas[idx];
@@ -209,28 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mapPopup.classList.add('hide');
 
         setTimeout(function() {
-            // Clear old
-            polySource.clear();
-            markerSource.clear();
-
-            // Draw polygon
-            var coords = makeCoords(area.lat, area.lng, area.r, 24);
-            var polyFeature = new ol.Feature(new ol.geom.Polygon([coords]));
-            polySource.addFeature(polyFeature);
-
-            // Draw marker
-            var markerCoord = ol.proj.fromLonLat([area.lng, area.lat]);
-            var markerFeature = new ol.Feature(new ol.geom.Point(markerCoord));
-            markerSource.addFeature(markerFeature);
-
-            // Animate view
-            map.getView().animate({
-                center: markerCoord,
-                zoom: area.zoom,
-                duration: 800
-            });
-
-            // Update popup
+            mapFrame.src = 'https://yandex.ru/map-widget/v1/?ll=' + area.lng + '%2C' + area.lat + '&z=' + area.zoom + '&l=map&coordorder=longlat';
             popupAreaName.textContent = area.name;
             popupDesc.textContent = area.desc;
 
@@ -240,7 +164,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
         }, 300);
 
-        // Active button
         var btns = areasGrid.querySelectorAll('.area-btn');
         btns.forEach(function(b) { b.classList.remove('active'); });
         btns[idx].classList.add('active');
@@ -257,6 +180,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         popupAreaName.textContent = areas[0].name;
         popupDesc.textContent = areas[0].desc;
-        switchArea(0);
     }
 });
