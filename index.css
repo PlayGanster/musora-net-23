@@ -623,17 +623,54 @@ ul {
     background: var(--bg-light);
 }
 
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.reviews-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reviews-viewport {
+    overflow: hidden;
+    flex: 1;
+}
+
+.reviews-track {
+    display: flex;
     gap: 24px;
+    transition: transform 0.4s ease;
 }
 
 .review-card {
+    min-width: calc(33.333% - 16px);
     background: var(--white);
     padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+
+.slider-arrow {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: var(--shadow);
+}
+
+.slider-arrow:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
 }
 
 .review-header {
@@ -1304,8 +1341,8 @@ ul {
         flex: 1 1 calc(50% - 8px);
     }
 
-    .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .review-card {
+        min-width: calc(50% - 12px);
     }
 
     .service-item {
@@ -1454,9 +1491,8 @@ ul {
         padding: 20px 12px;
     }
 
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .review-card {
+        min-width: 100%;
     }
 
     .cta-inner {
@@ -1565,8 +1601,10 @@ ul {
         flex: 1 1 calc(50% - 10px);
     }
 
-    .reviews-grid {
-        grid-template-columns: 1fr;
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
     }
 
     .cta-inner {

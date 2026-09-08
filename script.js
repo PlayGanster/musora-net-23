@@ -29,4 +29,33 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeMenu();
     });
+
+    // Reviews slider
+    const track = document.querySelector('.reviews-track');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    if (track && prevBtn && nextBtn) {
+        let position = 0;
+        function getVisible() {
+            const w = window.innerWidth;
+            if (w <= 768) return 1;
+            if (w <= 1024) return 2;
+            return 3;
+        }
+        function slide(dir) {
+            const cards = track.children;
+            const total = cards.length;
+            const visible = getVisible();
+            const maxPos = total - visible;
+            position = Math.max(0, Math.min(position + dir, maxPos));
+            const cardW = cards[0].offsetWidth + 24;
+            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
+        }
+        prevBtn.addEventListener('click', function() { slide(-1); });
+        nextBtn.addEventListener('click', function() { slide(1); });
+        window.addEventListener('resize', function() {
+            position = 0;
+            track.style.transform = 'translateX(0)';
+        });
+    }
 });
