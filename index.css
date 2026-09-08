@@ -570,14 +570,33 @@ ul {
     background: var(--white);
 }
 
-.steps-grid {
+.steps-top {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.steps-arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.steps-slider {
+    position: relative;
+}
+
+.steps-viewport {
+    overflow: hidden;
+}
+
+.steps-track {
+    display: flex;
+    gap: 24px;
 }
 
 .step-item {
-    flex: 1;
+    flex: 0 0 calc(25% - 18px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -608,13 +627,6 @@ ul {
     font-size: 13px;
     color: var(--text-light);
     line-height: 1.4;
-}
-
-.step-arrow {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    flex-shrink: 0;
 }
 
 /* ===== REVIEWS ===== */
@@ -1346,12 +1358,8 @@ ul {
         right: 40px;
     }
 
-    .steps-grid {
-        gap: 16px;
-    }
-
     .step-item {
-        flex: 1 1 calc(50% - 8px);
+        flex: 0 0 calc(50% - 12px);
     }
 
     .service-item {
@@ -1490,17 +1498,8 @@ ul {
         padding: 14px 28px;
     }
 
-    .steps-grid {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .step-arrow {
-        display: none;
-    }
-
     .step-item {
-        flex: 1 1 calc(50% - 6px);
+        flex: 0 0 100%;
         padding: 20px 12px;
     }
 
@@ -1598,16 +1597,8 @@ ul {
         flex-wrap: wrap;
     }
 
-    .steps-grid {
-        flex-wrap: wrap;
-    }
-
-    .step-arrow {
-        display: none;
-    }
-
     .step-item {
-        flex: 1 1 calc(50% - 10px);
+        flex: 0 0 100%;
     }
 
     .review-card {
@@ -1681,7 +1672,7 @@ ul {
     }
 
     .step-item {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
     }
 
     .areas-grid {
