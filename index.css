@@ -633,6 +633,7 @@ ul {
 
 .reviews-viewport {
     overflow: hidden;
+    padding: 0 56px;
 }
 
 .reviews-track {
