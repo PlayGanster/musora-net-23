@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вывоз мусора после ремонта в Краснодаре — Мусора Нет 23</title>
+    <meta name="description" content="Вывоз мусора после ремонта в Краснодаре от 2 300 ₽. Остатки, упаковка, пыль.">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="service.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (copy from main) -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-left">
+                <a href="index.html" class="logo"><img src="assets/logo.webp" alt="Мусора Нет 23" class="logo-icon"></a>
+                <div class="header-separator"></div>
+                <div class="header-location"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/></svg></div><span>Краснодар<br>и пригород</span></div>
+            </div>
+            <div class="header-right">
+                <div class="header-phone-block"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="#ff6b2b"/></svg></div><div><a href="tel:+79261234567" class="header-phone">+7 (926) 123-45-67</a><span class="header-hours">Ежедневно с 8:00 до 20:00</span></div></div>
+                <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
+                <div class="header-actions">
+                    <a href="#" class="social-circle whatsapp" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                    <a href="#" class="social-circle telegram" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0088cc"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+                    <a href="javascript:void(0)" class="btn-call popup-trigger">Позвоните мне</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav"><div class="container"><ul class="nav-list"><li><a href="index.html#services">Строительный мусор</a></li><li><a href="index.html#services">Старая мебель</a></li><li><a href="index.html#services">После ремонта</a></li><li><a href="index.html#services">Бытовой мусор</a></li><li><a href="index.html#services">С дачи</a></li><li><a href="index.html#services">Демонтаж</a></li><li><a href="index.html#map">Районы</a></li></ul></div></nav>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header"><a href="index.html" class="logo"><img src="assets/logo.webp" alt="Мусора Нет 23" class="logo-icon"></a><button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#222" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+        <nav class="mobile-nav"><a href="index.html#services">Услуги</a><a href="index.html#how">Как мы работаем</a><a href="index.html#reviews">Отзывы</a><a href="index.html#map">Районы</a></nav>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-location"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/></svg></div><span>Краснодар и пригород</span></div>
+            <div class="mobile-menu-phone-block"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="#ff6b2b"/></svg></div><div><a href="tel:+79261234567" class="mobile-menu-phone">+7 (926) 123-45-67</a><span class="mobile-menu-hours">Ежедневно с 8:00 до 20:00</span></div></div>
+            <div class="mobile-menu-socials"><a href="#" class="social-link whatsapp"><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="#" class="social-link telegram"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0088cc"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a><a href="tel:+79261234567" class="mobile-menu-phone">+7 (926) 123-45-67</a></div>
+            <button class="btn-call popup-trigger">Заказать звонок</button>
+        </div>
+    </aside>
+
+    <!-- Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-hero-inner">
+                <div class="service-hero-img">
+                    <div class="service-img-placeholder renovation"></div>
+                </div>
+                <div class="service-hero-content">
+                    <h1>Вывоз мусора после ремонта</h1>
+                    <p>Остатки стройматериалов, картонная упаковка, мешки с пылью и прочий мусор после ремонта. Уберём за собой в тот же день.</p>
+                    <div class="hero-price-block">
+                        <span class="price-label">от</span>
+                        <span class="price-value">2 300 ₽</span>
+                        <span class="price-unit">за машину</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="service-form-section">
+        <div class="container">
+            <div class="service-form-card">
+                <h2>Оставить заявку</h2>
+                <p class="form-subtitle">Рассчитаем стоимость за 2 минуты</p>
+                <div class="service-form-grid">
+                    <div class="form-group"><label>Ваше имя</label><input type="text" placeholder="Как к вам обращаться?"></div>
+                    <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+7 (___) ___-__-__"></div>
+                    <div class="form-group full"><label>Услуга</label><select><option>Строительный мусор</option><option>Старая мебель</option><option selected>Мусор после ремонта</option><option>Бытовой мусор</option><option>Мусор с дачи и участка</option><option>Демонтаж и вывоз мусора</option></select></div>
+                    <div class="form-group full"><label>Описание</label><textarea placeholder="Что нужно вывезти? Примерный объём?"></textarea></div>
+                    <button class="btn-submit">Рассчитать стоимость</button>
+                    <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Services -->
+    <section class="other-services">
+        <div class="container">
+            <h2>Другие услуги</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder construction"></div></div>
+                    <div class="service-info"><h3>Строительный мусор</h3><p>Кирпич, бетон, штукатурка, мешки и другой строительный мусор</p></div>
+                    <div class="service-price">от <strong>2 500</strong> ₽</div>
+                    <a href="stroitelniy-musor.html" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder furniture"></div></div>
+                    <div class="service-info"><h3>Старая мебель</h3><p>Диваны, шкафы, кровати, столы и другая мебель</p></div>
+                    <div class="service-price">от <strong>2 000</strong> ₽</div>
+                    <a href="staraya-mebel.html" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder renovation"></div></div>
+                    <div class="service-info"><h3>Мусор после ремонта</h3><p>Остатки стройматериалов, упаковка, пыль и прочее</p></div>
+                    <div class="service-price">от <strong>2 300</strong> ₽</div>
+                    <a href="musor-posle-remonta.html" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder household"></div></div>
+                    <div class="service-info"><h3>Бытовой мусор</h3><p>Хлам из квартиры, дома, гаража, кладовки и подобное</p></div>
+                    <div class="service-price">от <strong>1 800</strong> ₽</div>
+                    <a href="bytovoy-musor.html" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder dacha"></div></div>
+                    <div class="service-info"><h3>Мусор с дачи и участка</h3><p>Ветки, доски, ботва, старая теплица и разный мусор</p></div>
+                    <div class="service-price">от <strong>2 400</strong> ₽</div>
+                    <a href="musor-s-dachi.html" class="btn-order">Заказать</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-img"><div class="service-img-placeholder demolition"></div></div>
+                    <div class="service-info"><h3>Демонтаж и вывоз мусора</h3><p>Демонтаж перегородок, мебели, покрытий и вывоз мусора</p></div>
+                    <div class="service-price">от <strong>3 500</strong> ₽</div>
+                    <a href="demontazh.html" class="btn-order">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-left"><a href="index.html" class="logo"><img src="assets/logo.webp" alt="Мусора Нет 23" class="logo-icon"></a><div class="header-separator"></div><div class="footer-location"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/></svg></div><span>Краснодар<br>и пригород</span></div></div>
+            <div class="footer-right">
+                <div class="footer-phone-block"><div class="icon-badge"><svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3.5 1C2.67 1 2 1.67 2 2.5c0 6.08 4.92 11 11 11 .83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.4-1.01L12.5 9.5c-.28-.28-.73-.28-1.01 0l-1.09 1.09A8.05 8.05 0 015.41 5.6l1.09-1.09c.28-.28.28-.73 0-1.01L5.01 2A1.49 1.49 0 004 1.5 1.5 1.5 0 003.5 1z" fill="#ff6b2b"/></svg></div><div><a href="tel:+79261234567" class="footer-phone">+7 (926) 123-45-67</a><span class="footer-hours">Ежедневно с 8:00 до 20:00</span></div></div>
+                <a href="#" class="social-circle whatsapp" title="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+                <a href="#" class="social-circle telegram" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="#0088cc"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+                <a href="javascript:void(0)" class="btn-call popup-trigger">Позвоните мне</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 Мусора Нет 23</span><div class="footer-links"><a href="#">Политика конфиденциальности</a><a href="#">Согласие на обработку данных</a></div></div></div>
+    </footer>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay"><div class="popup-form"><button class="popup-close" id="popupClose">&times;</button><div id="popupContent"><h3>Заказать обратный звонок</h3><p class="popup-subtitle">Оставьте номер — перезвоним за 5 минут</p><div class="form-group"><label for="popupName">Ваше имя</label><input type="text" id="popupName" placeholder="Как к вам обращаться?"></div><div class="form-group"><label for="popupPhone">Телефон</label><input type="tel" id="popupPhone" placeholder="+7 (___) ___-__-__"></div><button class="btn-submit" id="popupSubmit">Перезвоните мне</button><p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p></div><div class="popup-success" id="popupSuccess"><div class="popup-success-icon">✓</div><h3>Спасибо!</h3><p>Мы перезвоним вам в ближайшее время</p></div></div></div>
+    <script src="script.js"></script>
+    <script>(function(){var o=document.getElementById('popupOverlay'),c=document.getElementById('popupClose'),t=document.querySelectorAll('.popup-trigger'),s=document.getElementById('popupSubmit'),p=document.getElementById('popupContent'),u=document.getElementById('popupSuccess');t.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();o.classList.add('active')})});c.addEventListener('click',function(){o.classList.remove('active');p.style.display='';u.classList.remove('show')});o.addEventListener('click',function(e){if(e.target===o){o.classList.remove('active');p.style.display='';u.classList.remove('show')}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&o.classList.contains('active')){o.classList.remove('active');p.style.display='';u.classList.remove('show')}});s.addEventListener('click',function(){p.style.display='none';u.classList.add('show')})})();</script>
+</body>
+</html>

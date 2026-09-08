@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мусора Нет 23 — Вывоз мусора в Краснодаре</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="service.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,7 +55,7 @@
                             <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                         </svg>
                     </a>
-                    <a href="tel:+79261234567" class="btn-call">Позвоните мне</a>
+                    <a href="javascript:void(0)" class="btn-call popup-trigger">Позвоните мне</a>
                 </div>
             </div>
         </div>
@@ -293,7 +294,7 @@
                     <div class="service-price">
                         от <strong>2 500</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="stroitelniy-musor.html" class="btn-order">Заказать</a>
                 </div>
                 <div class="service-item">
                     <div class="service-img">
@@ -306,7 +307,7 @@
                     <div class="service-price">
                         от <strong>2 000</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="staraya-mebel.html" class="btn-order">Заказать</a>
                 </div>
                 <div class="service-item">
                     <div class="service-img">
@@ -319,7 +320,7 @@
                     <div class="service-price">
                         от <strong>2 300</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="musor-posle-remonta.html" class="btn-order">Заказать</a>
                 </div>
                 <div class="service-item">
                     <div class="service-img">
@@ -332,7 +333,7 @@
                     <div class="service-price">
                         от <strong>1 800</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="bytovoy-musor.html" class="btn-order">Заказать</a>
                 </div>
                 <div class="service-item">
                     <div class="service-img">
@@ -345,7 +346,7 @@
                     <div class="service-price">
                         от <strong>2 400</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="musor-s-dachi.html" class="btn-order">Заказать</a>
                 </div>
                 <div class="service-item">
                     <div class="service-img">
@@ -358,7 +359,7 @@
                     <div class="service-price">
                         от <strong>3 500</strong> ₽
                     </div>
-                    <a href="#" class="btn-order">Заказать</a>
+                    <a href="demontazh.html" class="btn-order">Заказать</a>
                 </div>
             </div>
         </div>
@@ -787,7 +788,7 @@
                         <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                     </svg>
                 </a>
-                <a href="tel:+79261234567" class="btn-call">Позвоните мне</a>
+                <a href="javascript:void(0)" class="btn-call popup-trigger">Позвоните мне</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -801,5 +802,76 @@
         </div>
     </footer>
     <script src="./script.js"></script>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-form">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <div id="popupContent">
+                <h3>Заказать обратный звонок</h3>
+                <p class="popup-subtitle">Оставьте номер — перезвоним за 5 минут</p>
+                <div class="form-group">
+                    <label for="popupName">Ваше имя</label>
+                    <input type="text" id="popupName" placeholder="Как к вам обращаться?">
+                </div>
+                <div class="form-group">
+                    <label for="popupPhone">Телефон</label>
+                    <input type="tel" id="popupPhone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <button class="btn-submit" id="popupSubmit">Перезвоните мне</button>
+                <p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+            </div>
+            <div class="popup-success" id="popupSuccess">
+                <div class="popup-success-icon">✓</div>
+                <h3>Спасибо!</h3>
+                <p>Мы перезвоним вам в ближайшее время</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var overlay = document.getElementById('popupOverlay');
+        var closeBtn = document.getElementById('popupClose');
+        var triggers = document.querySelectorAll('.popup-trigger');
+        var submitBtn = document.getElementById('popupSubmit');
+        var content = document.getElementById('popupContent');
+        var success = document.getElementById('popupSuccess');
+
+        triggers.forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                overlay.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', function() {
+            overlay.classList.remove('active');
+            content.style.display = '';
+            success.classList.remove('show');
+        });
+
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+                content.style.display = '';
+                success.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                content.style.display = '';
+                success.classList.remove('show');
+            }
+        });
+
+        submitBtn.addEventListener('click', function() {
+            content.style.display = 'none';
+            success.classList.add('show');
+        });
+    })();
+    </script>
 </body>
 </html>
