@@ -639,7 +639,6 @@ ul {
     display: flex;
     gap: 24px;
     transition: transform 0.4s ease;
-    padding: 0 60px;
 }
 
 .review-card {
@@ -672,11 +671,11 @@ ul {
 }
 
 .slider-prev {
-    left: -66px;
+    left: -44px;
 }
 
 .slider-next {
-    right: -66px;
+    right: -44px;
 }
 
 .slider-arrow:hover {
