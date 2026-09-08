@@ -6,6 +6,8 @@
     <title>Мусора Нет 23 — Вывоз мусора в Краснодаре</title>
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@8.2.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@8.2.0/dist/ol.js"></script>
 </head>
 <body>
 
@@ -81,18 +83,7 @@
     <aside class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <div class="logo">
-                <div class="logo-icon">
-                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
-                        <rect width="40" height="40" rx="8" fill="#1a3a7a"/>
-                        <path d="M8 28h24v-8H8v8zm2-6h20v4H10v-4z" fill="white"/>
-                        <circle cx="14" cy="30" r="3" fill="white"/>
-                        <circle cx="26" cy="30" r="3" fill="white"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-musora">Мусора</span>
-                    <span class="logo-net">Нет <strong>23</strong></span>
-                </div>
+                <img src="assets/logo.webp" alt="Мусора Нет 23" class="logo-icon">
             </div>
             <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Закрыть">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -663,34 +654,39 @@
     <!-- Map / Areas -->
     <section class="areas-section">
         <div class="container">
-            <div class="map-placeholder">
-                <div class="map-pin">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <path d="M20 4C13.37 4 8 9.37 8 16c0 9.38 12 20 12 20s12-10.62 12-20c0-6.63-5.37-12-12-12zm0 16a4 4 0 110-8 4 4 0 010 8z" fill="#1a3a7a"/>
-                    </svg>
+            <div class="map-wrapper">
+                <div id="ol-map"></div>
+                <div class="map-fade" id="mapFade"></div>
+                <div class="map-popup" id="mapPopup">
+                    <div class="popup-city">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#ff6b2b"/>
+                        </svg>
+                        <span id="popupAreaName">Краснодар</span>
+                    </div>
+                    <div class="popup-desc" id="popupDesc">Работаю по всему городу</div>
                 </div>
-                <div class="map-label">Работаю по Краснодару и пригородам</div>
             </div>
-            <div class="areas-grid">
-                <button class="area-btn">Центральный</button>
-                <button class="area-btn">Фестивальный</button>
-                <button class="area-btn">Юбилейный</button>
-                <button class="area-btn">Прикубанский</button>
-                <button class="area-btn">Пашковский</button>
-                <button class="area-btn">Западный обход</button>
-                <button class="area-btn">Музыкальный</button>
-                <button class="area-btn">Черемушки</button>
-                <button class="area-btn">Комсомольский</button>
-                <button class="area-btn">ГМР</button>
-                <button class="area-btn">Российский</button>
-                <button class="area-btn">Славянский</button>
-                <button class="area-btn">Энка</button>
-                <button class="area-btn">ККБ</button>
-                <button class="area-btn">Гидрострой</button>
-                <button class="area-btn">Немецкая деревня</button>
-                <button class="area-btn">Яблоновский</button>
-                <button class="area-btn">Новая Адыгея</button>
-                <button class="area-btn">и другие районы</button>
+            <div class="areas-grid" id="areasGrid">
+                <button class="area-btn active" data-idx="0">Центральный</button>
+                <button class="area-btn" data-idx="1">Фестивальный</button>
+                <button class="area-btn" data-idx="2">Юбилейный</button>
+                <button class="area-btn" data-idx="3">Прикубанский</button>
+                <button class="area-btn" data-idx="4">Пашковский</button>
+                <button class="area-btn" data-idx="5">Западный обход</button>
+                <button class="area-btn" data-idx="6">Музыкальный</button>
+                <button class="area-btn" data-idx="7">Черемушки</button>
+                <button class="area-btn" data-idx="8">Комсомольский</button>
+                <button class="area-btn" data-idx="9">ГМР</button>
+                <button class="area-btn" data-idx="10">Российский</button>
+                <button class="area-btn" data-idx="11">Славянский</button>
+                <button class="area-btn" data-idx="12">Энка</button>
+                <button class="area-btn" data-idx="13">ККБ</button>
+                <button class="area-btn" data-idx="14">Гидрострой</button>
+                <button class="area-btn" data-idx="15">Немецкая деревня</button>
+                <button class="area-btn" data-idx="16">Яблоновский</button>
+                <button class="area-btn" data-idx="17">Новая Адыгея</button>
+                <button class="area-btn" data-idx="18">и другие районы</button>
             </div>
         </div>
     </section>
