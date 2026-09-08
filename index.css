@@ -634,6 +634,7 @@ ul {
 
 .reviews-viewport {
     overflow: hidden;
+    padding: 0 52px;
 }
 
 .reviews-track {
@@ -672,11 +673,11 @@ ul {
 }
 
 .slider-prev {
-    left: -60px;
+    left: 8px;
 }
 
 .slider-next {
-    right: -60px;
+    right: 8px;
 }
 
 .slider-arrow:hover {
@@ -1616,14 +1617,6 @@ ul {
         width: 36px;
         height: 36px;
         font-size: 20px;
-    }
-
-    .slider-prev {
-        left: 8px;
-    }
-
-    .slider-next {
-        right: 8px;
     }
 
     .cta-inner {
