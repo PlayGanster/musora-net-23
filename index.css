@@ -652,10 +652,8 @@ ul {
 }
 
 .review-card--dummy {
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-    border: none;
+    flex: 0 0 0;
+    overflow: hidden;
 }
 
 .slider-arrow {

@@ -53,9 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const card = getCards()[0];
             const gap = 24;
             const cardW = card.offsetWidth + gap;
-            const dummy = track.querySelector('.review-card--dummy');
-            const offset = dummy ? dummy.offsetWidth + gap : 0;
-            track.style.transform = 'translateX(-' + (offset + position * cardW) + 'px)';
+            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
         }
         prevBtn.addEventListener('click', function() { slide(-1); });
         nextBtn.addEventListener('click', function() { slide(1); });
@@ -64,9 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const card = getCards()[0];
             const gap = 24;
             const cardW = card.offsetWidth + gap;
-            const dummy = track.querySelector('.review-card--dummy');
-            const offset = dummy ? dummy.offsetWidth + gap : 0;
-            track.style.transform = 'translateX(-' + (offset + position * cardW) + 'px)';
+            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
         });
 
         // Touch swipe
