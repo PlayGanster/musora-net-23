@@ -633,13 +633,13 @@ ul {
 
 .reviews-viewport {
     overflow: hidden;
-    margin: 0 54px;
 }
 
 .reviews-track {
     display: flex;
     gap: 24px;
     transition: transform 0.4s ease;
+    padding: 0 60px;
 }
 
 .review-card {
@@ -672,11 +672,11 @@ ul {
 }
 
 .slider-prev {
-    left: -22px;
+    left: -66px;
 }
 
 .slider-next {
-    right: -22px;
+    right: -66px;
 }
 
 .slider-arrow:hover {
