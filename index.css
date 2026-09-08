@@ -649,11 +649,7 @@ ul {
     padding: 24px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-}
-
-.review-card--dummy {
-    flex: 0 0 0;
-    overflow: hidden;
+    flex-shrink: 0;
 }
 
 .slider-arrow {
