@@ -1355,6 +1355,10 @@ ul {
         flex: 1 1 calc(50% - 12px);
     }
 
+    .review-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+    }
+
     .hero-inner::after {
         opacity: 0.3;
     }
@@ -1601,6 +1605,10 @@ ul {
 
     .step-item {
         flex: 1 1 calc(50% - 10px);
+    }
+
+    .review-card {
+        flex: 0 0 100%;
     }
 
     .slider-arrow {

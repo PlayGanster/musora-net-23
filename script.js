@@ -37,22 +37,48 @@ document.addEventListener('DOMContentLoaded', function() {
     if (track && prevBtn && nextBtn) {
         let position = 0;
         function getVisible() {
+            const w = window.innerWidth;
+            if (w <= 768) return 1;
+            if (w <= 1024) return 2;
             return 3;
         }
+        function getMaxPos() {
+            return Math.max(0, track.children.length - getVisible());
+        }
         function slide(dir) {
-            const cards = track.children;
-            const total = cards.length;
-            const visible = getVisible();
-            const maxPos = total - visible;
-            position = Math.max(0, Math.min(position + dir, maxPos));
-            const cardW = cards[0].offsetWidth + 24;
+            position = Math.max(0, Math.min(position + dir, getMaxPos()));
+            const card = track.children[0];
+            const gap = 24;
+            const cardW = card.offsetWidth + gap;
             track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
         }
         prevBtn.addEventListener('click', function() { slide(-1); });
         nextBtn.addEventListener('click', function() { slide(1); });
         window.addEventListener('resize', function() {
-            position = 0;
-            track.style.transform = 'translateX(0)';
+            position = Math.min(position, getMaxPos());
+            const card = track.children[0];
+            const gap = 24;
+            const cardW = card.offsetWidth + gap;
+            track.style.transform = 'translateX(-' + (position * cardW) + 'px)';
+        });
+
+        // Touch swipe
+        let startX = 0;
+        let dragging = false;
+        track.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+            dragging = true;
+        }, { passive: true });
+        track.addEventListener('touchmove', function(e) {
+            if (!dragging) return;
+        }, { passive: true });
+        track.addEventListener('touchend', function(e) {
+            if (!dragging) return;
+            dragging = false;
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                slide(diff > 0 ? 1 : -1);
+            }
         });
     }
 });
