@@ -1593,6 +1593,10 @@ ul {
         text-align: left;
     }
 
+    .hero-features {
+        display: none;
+    }
+
     .hero-inner::after {
         opacity: 0.25;
     }
