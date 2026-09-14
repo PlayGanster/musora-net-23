@@ -403,53 +403,68 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .how-steps {
+        gap: 20px;
+    }
+}
+
 @media (max-width: 900px) {
     .service-hero {
         padding: 50px 0 60px;
     }
-    .service-hero-content h1 {
+    .service-hero .hero-title {
         font-size: 32px;
     }
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .service-form-card {
+        padding: 36px 32px;
+    }
+    .how-steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .how-step {
+        padding: 24px 16px;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .service-hero {
         padding: 40px 0 50px;
     }
-    .service-hero-content h1 {
-        font-size: 26px;
+    .service-hero .hero-title {
+        font-size: 28px;
     }
-    .service-hero-content .hero-subtitle {
+    .service-hero .hero-subtitle {
         font-size: 16px;
     }
-    .hero-price-block {
-        padding: 12px 20px;
-    }
-    .hero-price-block .price-value {
-        font-size: 24px;
-    }
-    .service-hero-cta {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .service-hero-cta .btn-primary {
-        text-align: center;
+    .service-hero .hero-badge {
+        position: static;
+        margin-top: 12px;
+        min-width: auto;
     }
     .how-steps {
         grid-template-columns: 1fr;
         gap: 0;
     }
+    .how-step {
+        padding: 20px 16px;
+    }
     .benefits-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
     }
     .service-form-card {
         padding: 28px 20px;
     }
     .service-form-card h2 {
-        font-size: 22px;
+        font-size: 24px;
     }
     .service-form-grid {
         grid-template-columns: 1fr;
@@ -465,7 +480,68 @@
     }
     .service-faq h2,
     .other-services h2 {
+        font-size: 24px;
+    }
+    .faq-question {
+        padding: 16px 20px;
+        font-size: 15px;
+    }
+    .faq-answer-inner {
+        padding: 0 20px 16px;
+        font-size: 14px;
+    }
+    .popup-form {
+        padding: 28px 20px;
+    }
+    .popup-form h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-hero {
+        padding: 36px 0 44px;
+    }
+    .service-hero .hero-title {
+        font-size: 26px;
+    }
+    .service-hero .hero-features li {
+        font-size: 14px;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .benefit-card {
+        padding: 20px 16px;
+    }
+    .service-form-card h2 {
         font-size: 22px;
+    }
+    .service-form-card .form-subtitle {
+        font-size: 13px;
+    }
+    .service-faq h2,
+    .other-services h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-hero .hero-title {
+        font-size: 24px;
+    }
+    .service-hero .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .service-hero .hero-cta .btn-primary {
+        text-align: center;
+    }
+    .how-step h3 {
+        font-size: 16px;
+    }
+    .how-step p {
+        font-size: 13px;
     }
 }
 
