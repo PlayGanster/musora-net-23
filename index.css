@@ -1531,15 +1531,19 @@ ul {
 
     .steps-grid {
         flex-direction: column;
+        border: none;
+        border-radius: 0;
+        gap: 12px;
     }
 
     .step-item {
         padding: 16px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
     }
 
     .step-arrow {
-        transform: rotate(90deg);
-        padding: 4px 0;
+        display: none;
     }
 
     .cta-inner {
@@ -1680,6 +1684,8 @@ ul {
 
     .step-item {
         padding: 14px 12px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
     }
 
     .review-card {
