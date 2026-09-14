@@ -1559,6 +1559,25 @@ ul {
         flex-wrap: wrap;
     }
 
+    .logo-icon {
+        width: 95px;
+        height: 60px;
+    }
+
+    .header-phone {
+        font-size: 15px;
+    }
+
+    .icon-badge {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-badge svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .nav-list {
         flex-wrap: wrap;
         justify-content: center;
@@ -1707,8 +1726,13 @@ ul {
 }
 
 @media (max-width: 480px) {
-    .header-phone-block {
-        display: none;
+    .logo-icon {
+        width: 80px;
+        height: 52px;
+    }
+
+    .header-phone {
+        font-size: 14px;
     }
 
     .hero-title {
