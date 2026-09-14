@@ -1012,6 +1012,12 @@ ul {
     gap: 20px;
 }
 
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .footer .logo-musora {
     color: var(--white);
 }
