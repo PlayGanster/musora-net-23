@@ -746,6 +746,20 @@ ul {
 .cta-section {
     padding: 50px 0;
     background: url('assets/forma.webp') center/cover no-repeat;
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15,37,85,0.7);
+    z-index: 0;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-inner {
@@ -761,7 +775,7 @@ ul {
 .cta-content h2 {
     font-size: 32px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--white);
     line-height: 1.2;
     margin-bottom: 24px;
 }
@@ -775,21 +789,22 @@ ul {
 .cta-input {
     flex: 1;
     padding: 16px 20px;
-    border: 2px solid var(--border);
+    border: 2px solid rgba(255,255,255,0.25);
     border-radius: 10px;
     font-size: 15px;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s;
-    background: var(--white);
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
 }
 
 .cta-input:focus {
-    border-color: var(--primary);
+    border-color: var(--accent);
 }
 
 .cta-input::placeholder {
-    color: #aaa;
+    color: rgba(255,255,255,0.5);
 }
 
 .cta-privacy {
@@ -797,7 +812,7 @@ ul {
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.6);
 }
 
 /* ===== AREAS ===== */
