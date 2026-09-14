@@ -1,66 +1,71 @@
 /* =============================================
    SERVICE LANDING PAGE STYLES
-   Match main page design language exactly
+   Full landing page design
    ============================================= */
 
-/* Hero */
+/* Hero — dark gradient overlay on background */
 .service-hero {
-    padding: 50px 0 60px;
-    background: var(--white);
+    padding: 70px 0 80px;
     position: relative;
     overflow: hidden;
+    background: var(--primary-dark);
+    color: var(--white);
+}
+
+.service-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('assets/main.webp') center/cover no-repeat;
+    opacity: 0.18;
+    z-index: 0;
 }
 
 .service-hero::after {
     content: '';
     position: absolute;
-    top: -50px;
-    bottom: -60px;
-    right: 0;
-    left: 0;
-    background: url('assets/main.webp') right center/auto 100% no-repeat;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.08;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,37,85,0.92) 0%, rgba(26,58,122,0.85) 50%, rgba(15,37,85,0.78) 100%);
+    z-index: 1;
 }
 
 .service-hero .container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .service-hero-content {
-    max-width: 600px;
+    max-width: 680px;
 }
 
 .service-hero-content h1 {
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 900;
-    color: var(--primary);
-    line-height: 1.15;
-    margin-bottom: 12px;
+    line-height: 1.12;
+    margin-bottom: 16px;
+    color: var(--white);
 }
 
 .service-hero-content .hero-subtitle {
     font-size: 20px;
-    font-weight: 700;
-    color: var(--accent);
-    line-height: 1.4;
-    margin-bottom: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 28px;
+    color: rgba(255,255,255,0.85);
 }
 
 .service-hero-features {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 .service-hero-features li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 15px;
+    gap: 12px;
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 10px;
-    color: var(--text);
+    margin-bottom: 12px;
+    color: rgba(255,255,255,0.95);
 }
 
 .service-hero-features li svg {
@@ -78,62 +83,182 @@
     display: inline-flex;
     align-items: baseline;
     gap: 8px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 24px;
-    box-shadow: var(--shadow);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 16px 28px;
+    backdrop-filter: blur(8px);
 }
 
 .hero-price-block .price-label {
     font-size: 15px;
     font-weight: 600;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.7);
 }
 
 .hero-price-block .price-value {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 900;
     color: var(--accent);
 }
 
 .hero-price-block .price-unit {
     font-size: 14px;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.6);
 }
 
 .service-hero-cta .btn-primary {
     display: inline-block;
     background: var(--accent);
     color: var(--white);
-    padding: 16px 32px;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 18px 36px;
+    border-radius: 12px;
+    font-size: 17px;
     font-weight: 700;
     text-align: center;
     border: none;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
 }
 
 .service-hero-cta .btn-primary:hover {
     background: var(--accent-hover);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
-/* Form Section */
-.service-form-section {
-    padding: 50px 0;
+/* ===== HOW IT WORKS ===== */
+.service-how {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.service-how h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.how-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.how-step {
+    text-align: center;
+    padding: 32px 24px;
+}
+
+.how-step-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.how-step-num {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.how-step h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.how-step p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===== BENEFITS ===== */
+.service-benefits {
+    padding: 60px 0;
     background: var(--bg-light);
 }
 
-.service-form-card {
+.service-benefits h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.benefit-card {
     background: var(--white);
     border-radius: var(--radius);
-    padding: 40px 48px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+}
+
+.benefit-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(26,58,122,0.08);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.benefit-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.benefit-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===== FORM SECTION ===== */
+.service-form-section {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.service-form-card {
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    padding: 44px 48px;
     max-width: 740px;
     margin: 0 auto;
-    box-shadow: var(--shadow);
 }
 
 .service-form-card h2 {
@@ -246,26 +371,106 @@
     gap: 6px;
 }
 
-/* Other Services */
-.other-services {
-    padding: 50px 0;
+/* ===== FAQ ===== */
+.service-faq {
+    padding: 60px 0;
     background: var(--bg-light);
 }
 
-.other-services h2 {
-    font-size: 28px;
+.service-faq h2 {
+    font-size: 30px;
     font-weight: 800;
     color: var(--primary);
-    margin-bottom: 24px;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.faq-list {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    font-family: inherit;
+    text-align: left;
+    gap: 12px;
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-arrow {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer-inner {
+    padding: 0 24px 20px;
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+/* ===== OTHER SERVICES ===== */
+.other-services {
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.other-services h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+    .service-hero {
+        padding: 50px 0 60px;
+    }
     .service-hero-content h1 {
         font-size: 32px;
     }
-    .service-hero-content .hero-subtitle {
-        font-size: 17px;
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -280,10 +485,10 @@
         font-size: 16px;
     }
     .hero-price-block {
-        padding: 10px 18px;
+        padding: 12px 20px;
     }
     .hero-price-block .price-value {
-        font-size: 22px;
+        font-size: 24px;
     }
     .service-hero-cta {
         flex-direction: column;
@@ -292,8 +497,12 @@
     .service-hero-cta .btn-primary {
         text-align: center;
     }
-    .service-form-section {
-        padding: 40px 0;
+    .how-steps {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
     }
     .service-form-card {
         padding: 28px 20px;
@@ -313,6 +522,7 @@
     .form-privacy {
         grid-column: auto;
     }
+    .service-faq h2,
     .other-services h2 {
         font-size: 22px;
     }
