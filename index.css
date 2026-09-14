@@ -548,6 +548,13 @@ ul {
     border-radius: 8px;
 }
 
+.service-img-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 .service-img-placeholder.construction {
     background: linear-gradient(135deg, #d4a574, #c4956a);
 }
