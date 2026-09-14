@@ -20,6 +20,14 @@
     z-index: -1;
 }
 
+/* Per-service hero backgrounds */
+.hero-bitovoi .hero-inner::after  { background-image: url('assets/bitovoi-musor.webp'); }
+.hero-demontazh .hero-inner::after { background-image: url('assets/demontaz.webp'); }
+.hero-posle-remonta .hero-inner::after { background-image: url('assets/posle-remonta.webp'); }
+.hero-s-dachi .hero-inner::after  { background-image: url('assets/s-dachi.webp'); }
+.hero-staraya-mebel .hero-inner::after { background-image: url('assets/staraia-mebel.webp'); }
+.hero-stroitelniy .hero-inner::after  { background-image: url('assets/stroitelniy-musor.webp'); }
+
 .service-hero .hero-badge-text strong {
     font-size: 20px;
     color: var(--accent);
