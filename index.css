@@ -52,7 +52,7 @@ ul {
 .header {
     background: var(--white);
     border-bottom: 1px solid var(--border);
-    padding: 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 100;
