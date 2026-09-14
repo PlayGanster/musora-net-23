@@ -318,7 +318,7 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 340px;
+    max-width: 380px;
     background: var(--white);
     border-radius: 10px;
     box-shadow: var(--shadow);
@@ -358,6 +358,39 @@ ul {
     border-radius: 10px;
     padding: 14px 24px;
     width: 100%;
+}
+
+.hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.hero-form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.hero-form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26,58,122,0.12);
+}
+
+.hero-form-input::placeholder {
+    color: #aaa;
+}
+
+.hero-form-btn {
+    width: 100%;
+    padding: 14px 24px;
 }
 
 .hero-badge {
