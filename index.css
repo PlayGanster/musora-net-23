@@ -744,24 +744,32 @@ ul {
 
 /* ===== CTA SECTION ===== */
 .cta-section {
-    padding: 50px 0;
-    background: linear-gradient(135deg, #e8f0fe 0%, #f0f4ff 100%);
+    padding: 60px 0;
+    background: url('assets/forma.webp') center/cover no-repeat;
+    position: relative;
 }
 
-.cta-inner {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,37,85,0.9) 0%, rgba(26,58,122,0.85) 100%);
+    z-index: 0;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-content {
-    flex: 1;
+    max-width: 600px;
 }
 
 .cta-content h2 {
     font-size: 32px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--white);
     line-height: 1.2;
     margin-bottom: 24px;
 }
@@ -775,21 +783,22 @@ ul {
 .cta-input {
     flex: 1;
     padding: 16px 20px;
-    border: 2px solid var(--border);
+    border: 2px solid rgba(255,255,255,0.25);
     border-radius: 10px;
     font-size: 15px;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s;
-    background: var(--white);
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
 }
 
 .cta-input:focus {
-    border-color: var(--primary);
+    border-color: var(--accent);
 }
 
 .cta-input::placeholder {
-    color: #aaa;
+    color: rgba(255,255,255,0.5);
 }
 
 .cta-privacy {
@@ -797,75 +806,7 @@ ul {
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: var(--text-light);
-}
-
-.cta-image {
-    flex-shrink: 0;
-    width: 280px;
-    height: 300px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.cta-worker-placeholder {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.worker-illustration {
-    position: relative;
-    width: 120px;
-    height: 260px;
-}
-
-.wi-head {
-    width: 44px;
-    height: 44px;
-    background: #f5c6a0;
-    border-radius: 50%;
-    margin: 0 auto 6px;
-}
-
-.wi-body {
-    width: 64px;
-    height: 90px;
-    background: #1a3a7a;
-    border-radius: 10px 10px 6px 6px;
-    margin: 0 auto;
-}
-
-.wi-arm {
-    position: absolute;
-    width: 20px;
-    height: 60px;
-    background: #1a3a7a;
-    border-radius: 10px;
-    top: 50px;
-}
-
-.wi-arm-left {
-    left: 10px;
-    transform: rotate(15deg);
-}
-
-.wi-arm-right {
-    right: 10px;
-    transform: rotate(-40deg);
-    transform-origin: top center;
-}
-
-.wi-legs {
-    width: 64px;
-    height: 100px;
-    background: #1a3a7a;
-    margin: 0 auto;
-    border-radius: 0 0 6px 6px;
+    color: rgba(255,255,255,0.6);
 }
 
 /* ===== AREAS ===== */
