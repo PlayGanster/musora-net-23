@@ -1559,31 +1559,6 @@ ul {
         flex-wrap: wrap;
     }
 
-    .logo-icon {
-        width: 80px;
-        height: 52px;
-    }
-
-    .header-left {
-        gap: 12px;
-    }
-
-    .header-phone-block {
-        gap: 6px;
-    }
-
-    .header-phone {
-        font-size: 14px;
-    }
-
-    .header-hours {
-        display: none;
-    }
-
-    .header-right {
-        gap: 12px;
-    }
-
     .nav-list {
         flex-wrap: wrap;
         justify-content: center;
@@ -1732,32 +1707,8 @@ ul {
 }
 
 @media (max-width: 480px) {
-    .logo-icon {
-        width: 60px;
-        height: 40px;
-        border-radius: 8px;
-    }
-
-    .header-left {
-        gap: 8px;
-    }
-
-    .header-phone {
-        font-size: 13px;
-    }
-
     .header-phone-block {
-        gap: 4px;
-    }
-
-    .icon-badge {
-        width: 32px;
-        height: 32px;
-    }
-
-    .icon-badge svg {
-        width: 16px;
-        height: 16px;
+        display: none;
     }
 
     .hero-title {
