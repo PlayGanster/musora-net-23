@@ -753,7 +753,7 @@ ul {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(15,37,85,0.7);
+    background: rgba(255,255,255,0.75);
     z-index: 0;
 }
 
