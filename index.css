@@ -746,20 +746,6 @@ ul {
 .cta-section {
     padding: 50px 0;
     background: url('assets/forma.webp') center/cover no-repeat;
-    position: relative;
-}
-
-.cta-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.75);
-    z-index: 0;
-}
-
-.cta-section .container {
-    position: relative;
-    z-index: 1;
 }
 
 .cta-inner {
