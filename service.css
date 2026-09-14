@@ -157,15 +157,30 @@
 /* ===== FORM SECTION ===== */
 .service-form-section {
     padding: 60px 0;
-    background: var(--white);
+    background: url('assets/forma.webp') center/cover no-repeat;
+    position: relative;
+}
+
+.service-form-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,37,85,0.88) 0%, rgba(26,58,122,0.82) 100%);
+    z-index: 0;
+}
+
+.service-form-section .container {
+    position: relative;
+    z-index: 1;
 }
 
 .service-form-card {
-    background: var(--bg-light);
+    background: var(--white);
     border-radius: var(--radius);
     padding: 44px 48px;
     max-width: 740px;
     margin: 0 auto;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.2);
 }
 
 .service-form-card h2 {
