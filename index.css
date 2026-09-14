@@ -744,7 +744,7 @@ ul {
 
 /* ===== CTA SECTION ===== */
 .cta-section {
-    padding: 60px 0;
+    padding: 50px 0;
     background: url('assets/forma.webp') center/cover no-repeat;
     position: relative;
 }
@@ -753,7 +753,7 @@ ul {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(15,37,85,0.9) 0%, rgba(26,58,122,0.85) 100%);
+    background: linear-gradient(135deg, rgba(232,240,254,0.92) 0%, rgba(240,244,255,0.92) 100%);
     z-index: 0;
 }
 
@@ -762,14 +762,20 @@ ul {
     z-index: 1;
 }
 
+.cta-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 .cta-content {
-    max-width: 600px;
+    flex: 1;
 }
 
 .cta-content h2 {
     font-size: 32px;
     font-weight: 800;
-    color: var(--white);
+    color: var(--primary);
     line-height: 1.2;
     margin-bottom: 24px;
 }
@@ -783,22 +789,21 @@ ul {
 .cta-input {
     flex: 1;
     padding: 16px 20px;
-    border: 2px solid rgba(255,255,255,0.25);
+    border: 2px solid var(--border);
     border-radius: 10px;
     font-size: 15px;
     font-family: inherit;
     outline: none;
     transition: border-color 0.2s;
-    background: rgba(255,255,255,0.12);
-    color: var(--white);
+    background: var(--white);
 }
 
 .cta-input:focus {
-    border-color: var(--accent);
+    border-color: var(--primary);
 }
 
 .cta-input::placeholder {
-    color: rgba(255,255,255,0.5);
+    color: #aaa;
 }
 
 .cta-privacy {
@@ -806,7 +811,7 @@ ul {
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: rgba(255,255,255,0.6);
+    color: var(--text-light);
 }
 
 /* ===== AREAS ===== */
