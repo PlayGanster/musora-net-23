@@ -3,128 +3,35 @@
    Full landing page design
    ============================================= */
 
-/* Hero — dark gradient overlay on background */
+/* Hero — light style matching main page */
 .service-hero {
-    padding: 70px 0 80px;
-    position: relative;
-    overflow: hidden;
-    background: var(--primary-dark);
-    color: var(--white);
+    padding: 0;
 }
 
-.service-hero::before {
+.service-hero .hero-inner::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: url('assets/main.webp') center/cover no-repeat;
-    opacity: 0.18;
-    z-index: 0;
+    top: -50px;
+    bottom: -60px;
+    right: 0;
+    left: 0;
+    background: url('assets/main.webp') right center/auto 100% no-repeat;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.service-hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(15,37,85,0.92) 0%, rgba(26,58,122,0.85) 50%, rgba(15,37,85,0.78) 100%);
-    z-index: 1;
-}
-
-.service-hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.service-hero-content {
-    max-width: 680px;
-}
-
-.service-hero-content h1 {
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.12;
-    margin-bottom: 16px;
-    color: var(--white);
-}
-
-.service-hero-content .hero-subtitle {
+.service-hero .hero-badge-text strong {
     font-size: 20px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-bottom: 28px;
-    color: rgba(255,255,255,0.85);
-}
-
-.service-hero-features {
-    margin-bottom: 36px;
-}
-
-.service-hero-features li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    color: rgba(255,255,255,0.95);
-}
-
-.service-hero-features li svg {
-    flex-shrink: 0;
-}
-
-.service-hero-cta {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.hero-price-block {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    padding: 16px 28px;
-    backdrop-filter: blur(8px);
-}
-
-.hero-price-block .price-label {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.7);
-}
-
-.hero-price-block .price-value {
-    font-size: 30px;
-    font-weight: 900;
     color: var(--accent);
 }
 
-.hero-price-block .price-unit {
-    font-size: 14px;
-    color: rgba(255,255,255,0.6);
+.service-hero .hero-badge-text span {
+    font-size: 13px;
+    color: var(--text-light);
 }
 
-.service-hero-cta .btn-primary {
-    display: inline-block;
-    background: var(--accent);
-    color: var(--white);
-    padding: 18px 36px;
-    border-radius: 12px;
-    font-size: 17px;
-    font-weight: 700;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
-    text-decoration: none;
-}
-
-.service-hero-cta .btn-primary:hover {
-    background: var(--accent-hover);
-    transform: translateY(-2px);
+.service-hero .hero-badge {
+    min-width: 220px;
 }
 
 /* ===== HOW IT WORKS ===== */
