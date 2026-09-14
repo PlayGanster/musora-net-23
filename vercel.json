@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        { "source": "/stroitelniy-musor", "destination": "/stroitelniy-musor.html" },
+        { "source": "/stroitelniy-musor/", "destination": "/stroitelniy-musor.html" },
+        { "source": "/staraya-mebel", "destination": "/staraya-mebel.html" },
+        { "source": "/staraya-mebel/", "destination": "/staraya-mebel.html" },
+        { "source": "/musor-posle-remonta", "destination": "/musor-posle-remonta.html" },
+        { "source": "/musor-posle-remonta/", "destination": "/musor-posle-remonta.html" },
+        { "source": "/bytovoy-musor", "destination": "/bytovoy-musor.html" },
+        { "source": "/bytovoy-musor/", "destination": "/bytovoy-musor.html" },
+        { "source": "/musor-s-dachi", "destination": "/musor-s-dachi.html" },
+        { "source": "/musor-s-dachi/", "destination": "/musor-s-dachi.html" },
+        { "source": "/demontazh", "destination": "/demontazh.html" },
+        { "source": "/demontazh/", "destination": "/demontazh.html" }
+    ]
+}
