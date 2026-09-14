@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вывоз старой мебели в Краснодаре — Мусора Нет 23</title>
-    <meta name="description" content="Вывоз старой мебели в Краснодаре от 2 000 ₽. Диваны, шкафы, кровати — вывезём всё.">
+    <title>Вывоз старой мебели в Краснодаре — от 2 000 ₽ | Мусора Нет 23</title>
+    <meta name="description" content="Вывоз старой мебели в Краснодаре от 2 000 ₽. Диваны, шкафы, кровати, столы — вывезём всё. Разберём и вынесем. Тел: +7 (926) 123-45-67">
+    <meta name="keywords" content="вывоз мебели краснодар, вывоз старой мебели, вынести диван, вынести шкаф, мебель на свалку краснодар">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://musora-net23.ru/staraya-mebel.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Вывоз старой мебели в Краснодаре — Мусора Нет 23">
+    <meta property="og:description" content="Вывоз старой мебели от 2 000 ₽. Диваны, шкафы, кровати — вывезём всё.">
+    <meta property="og:image" content="https://musora-net23.ru/assets/main.webp">
+    <meta property="og:url" content="https://musora-net23.ru/staraya-mebel.html">
+    <meta property="og:locale" content="ru_RU">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Вывоз старой мебели",
+        "provider": {"@type": "LocalBusiness", "name": "Мусора Нет 23", "telephone": "+7-926-123-45-67"},
+        "areaServed": "Краснодар",
+        "offers": {"@type": "Offer", "price": "2000", "priceCurrency": "RUB", "priceSpecification": {"@type": "PriceSpecification", "price": "2000", "priceCurrency": "RUB", "unitText": "за машину"}}
+    }
+    </script>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="service.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -68,14 +87,15 @@
             <div class="service-form-card">
                 <h2>Оставить заявку</h2>
                 <p class="form-subtitle">Рассчитаем стоимость за 2 минуты</p>
-                <div class="service-form-grid">
-                    <div class="form-group"><label>Ваше имя</label><input type="text" placeholder="Как к вам обращаться?"></div>
-                    <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+7 (___) ___-__-__"></div>
-                    <div class="form-group full"><label>Услуга</label><select><option>Строительный мусор</option><option selected>Старая мебель</option><option>Мусор после ремонта</option><option>Бытовой мусор</option><option>Мусор с дачи и участка</option><option>Демонтаж и вывоз мусора</option></select></div>
-                    <div class="form-group full"><label>Описание</label><textarea placeholder="Что нужно вывезти? Примерный объём?"></textarea></div>
-                    <button class="btn-submit">Рассчитать стоимость</button>
+                <form action="send.php" method="POST" class="service-form-grid">
+                    <input type="hidden" name="page" value="Старая мебель">
+                    <div class="form-group"><label>Ваше имя</label><input type="text" name="name" placeholder="Как к вам обращаться?"></div>
+                    <div class="form-group"><label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__"></div>
+                    <div class="form-group full"><label>Услуга</label><select name="service"><option>Строительный мусор</option><option selected>Старая мебель</option><option>Мусор после ремонта</option><option>Бытовой мусор</option><option>Мусор с дачи и участка</option><option>Демонтаж и вывоз мусора</option></select></div>
+                    <div class="form-group full"><label>Описание</label><textarea name="message" placeholder="Что нужно вывезти? Примерный объём?"></textarea></div>
+                    <button type="submit" class="btn-submit">Рассчитать стоимость</button>
                     <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
-                </div>
+                </form>
             </div>
         </div>
     </section>
@@ -125,6 +145,14 @@
         </div>
     </section>
 
+    <section class="seo-hidden" style="padding:40px 0;background:var(--white);">
+        <div class="container" style="max-width:800px;">
+            <h2 style="font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px;">Вывоз старой мебели в Краснодаре</h2>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;margin-bottom:12px;">Вывоз старой мебели в Краснодаре от компании «Мусора Нет 23». Вывозим диваны, шкафы, кровати, столы, стулья и любую другую мебель. Разбираем, выносим и вывозим — вам не придётся поднимать даже палец.</p>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;">Цена вывоза мебели — от 2 000 ₽ за машину. Работаем ежедневно, выезд в день обращения. Звоните: +7 (926) 123-45-67.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-inner">
@@ -140,7 +168,7 @@
     </footer>
 
     <!-- Popup -->
-    <div class="popup-overlay" id="popupOverlay"><div class="popup-form"><button class="popup-close" id="popupClose">&times;</button><div id="popupContent"><h3>Заказать обратный звонок</h3><p class="popup-subtitle">Оставьте номер — перезвоним за 5 минут</p><div class="form-group"><label for="popupName">Ваше имя</label><input type="text" id="popupName" placeholder="Как к вам обращаться?"></div><div class="form-group"><label for="popupPhone">Телефон</label><input type="tel" id="popupPhone" placeholder="+7 (___) ___-__-__"></div><button class="btn-submit" id="popupSubmit">Перезвоните мне</button><p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p></div><div class="popup-success" id="popupSuccess"><div class="popup-success-icon">✓</div><h3>Спасибо!</h3><p>Мы перезвоним вам в ближайшее время</p></div></div></div>
+    <div class="popup-overlay" id="popupOverlay"><div class="popup-form"><button class="popup-close" id="popupClose">&times;</button><div id="popupContent"><h3>Заказать обратный звонок</h3><p class="popup-subtitle">Оставьте номер — перезвоним за 5 минут</p><form action="send.php" method="POST"><input type="hidden" name="page" value="Старая мебель"><input type="hidden" name="service" value="Обратный звонок"><div class="form-group"><label for="popupName">Ваше имя</label><input type="text" id="popupName" name="name" placeholder="Как к вам обращаться?"></div><div class="form-group"><label for="popupPhone">Телефон</label><input type="tel" id="popupPhone" name="phone" placeholder="+7 (___) ___-__-__"></div><button type="submit" class="btn-submit" id="popupSubmit">Перезвоните мне</button><p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p></form></div><div class="popup-success" id="popupSuccess"><div class="popup-success-icon">✓</div><h3>Спасибо!</h3><p>Мы перезвоним вам в ближайшее время</p></div></div></div>
     <script src="script.js"></script>
     <script>(function(){var o=document.getElementById('popupOverlay'),c=document.getElementById('popupClose'),t=document.querySelectorAll('.popup-trigger'),s=document.getElementById('popupSubmit'),p=document.getElementById('popupContent'),u=document.getElementById('popupSuccess');t.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();o.classList.add('active')})});c.addEventListener('click',function(){o.classList.remove('active');p.style.display='';u.classList.remove('show')});o.addEventListener('click',function(e){if(e.target===o){o.classList.remove('active');p.style.display='';u.classList.remove('show')}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&o.classList.contains('active')){o.classList.remove('active');p.style.display='';u.classList.remove('show')}});s.addEventListener('click',function(){p.style.display='none';u.classList.add('show')})})();</script>
 </body>

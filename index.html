@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мусора Нет 23 — Вывоз мусора в Краснодаре</title>
+    <title>Мусора Нет 23 — Вывоз мусора в Краснодаре | от 1 800 ₽</title>
+    <meta name="description" content="Вывоз мусора в Краснодаре и пригороде от 1 800 ₽ за машину. Строительный мусор, старая мебель, бытовой хлам. Быстрый выезд, честные цены. Тел: +7 (926) 123-45-67">
+    <meta name="keywords" content="вывоз мусора краснодар, вывоз строительного мусора, вывоз старой мебели, бытовой мусор краснодар, вывоз мусора цена, грузчики краснодар, вывоз хлама">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://musora-net23.ru/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Мусора Нет 23 — Вывоз мусора в Краснодаре">
+    <meta property="og:description" content="Вывоз мусора в Краснодаре от 1 800 ₽. Строительный мусор, мебель, бытовой хлам. Быстрый выезд, честные цены.">
+    <meta property="og:image" content="https://musora-net23.ru/assets/main.webp">
+    <meta property="og:url" content="https://musora-net23.ru/index.html">
+    <meta property="og:locale" content="ru_RU">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Мусора Нет 23",
+        "description": "Вывоз мусора в Краснодаре и пригороде",
+        "url": "https://musora-net23.ru",
+        "telephone": "+7-926-123-45-67",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Краснодар",
+            "addressCountry": "RU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.0355,
+            "longitude": 38.9753
+        },
+        "openingHours": "Mo-Su 08:00-20:00",
+        "priceRange": "от 1800 до 5000 ₽"
+    }
+    </script>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="service.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -750,6 +782,16 @@
     </section>
 
     <!-- Footer -->
+    <!-- SEO текст -->
+    <section class="seo-hidden" style="padding:40px 0;background:var(--white);">
+        <div class="container" style="max-width:800px;">
+            <h2 style="font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px;">Вывоз мусора в Краснодаре — услуги компании «Мусора Нет 23»</h2>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;margin-bottom:12px;">Компания «Мусора Нет 23» предоставляет услуги по вывозу мусора в Краснодаре и пригороде. Мы работаем ежедневно с 8:00 до 20:00 и выполняем заказы любой сложности — от вывоза бытового мусора из квартиры до вывоза строительного мусора после ремонта или демонтажа.</p>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;margin-bottom:12px;">Наши услуги: вывоз строительного мусора (кирпич, бетон, штукатурка), вывоз старой мебели (диваны, шкафы, кровати), вывоз мусора после ремонта (остатки стройматериалов, упаковка), вывоз бытового мусора (хлам из квартиры, гаража, кладовки), вывоз мусора с дачи и участка (ветки, доски, ботва), демонтаж и вывоз мусора (перегородки, покрытия, встроенная мебель).</p>
+            <p style="font-size:15px;color:var(--text-light);line-height:1.7;">Цены на вывоз мусора в Краснодаре начинаются от 1 800 ₽ за машину. Мы берём на себя все работы по погрузке и транспортировке. Бесплатный выезд для оценки объёма, точный расчёт стоимости до начала работ. Звоните: +7 (926) 123-45-67.</p>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container footer-inner">
             <div class="footer-left">
@@ -810,16 +852,20 @@
             <div id="popupContent">
                 <h3>Заказать обратный звонок</h3>
                 <p class="popup-subtitle">Оставьте номер — перезвоним за 5 минут</p>
-                <div class="form-group">
-                    <label for="popupName">Ваше имя</label>
-                    <input type="text" id="popupName" placeholder="Как к вам обращаться?">
-                </div>
-                <div class="form-group">
-                    <label for="popupPhone">Телефон</label>
-                    <input type="tel" id="popupPhone" placeholder="+7 (___) ___-__-__">
-                </div>
-                <button class="btn-submit" id="popupSubmit">Перезвоните мне</button>
-                <p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                <form action="send.php" method="POST">
+                    <input type="hidden" name="page" value="Главная страница">
+                    <input type="hidden" name="service" value="Обратный звонок">
+                    <div class="form-group">
+                        <label for="popupName">Ваше имя</label>
+                        <input type="text" id="popupName" name="name" placeholder="Как к вам обращаться?">
+                    </div>
+                    <div class="form-group">
+                        <label for="popupPhone">Телефон</label>
+                        <input type="tel" id="popupPhone" name="phone" placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <button type="submit" class="btn-submit" id="popupSubmit">Перезвоните мне</button>
+                    <p class="popup-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных</p>
+                </form>
             </div>
             <div class="popup-success" id="popupSuccess">
                 <div class="popup-success-icon">✓</div>
