@@ -34,7 +34,7 @@
 .hero-posle-remonta::after { background-image: url('assets/posle-remonta.webp'); }
 .hero-s-dachi::after   { background-image: url('assets/s-dachi.webp'); }
 .hero-staraya-mebel::after { background-image: url('assets/staraia-mebel.webp'); }
-.hero-stroitelniy::after  { background-image: url('assets/stroitelniy-musor.webp'); }
+.hero-stroitelniy::after  { background-image: url('assets/stroitelnii-musor.webp'); }
 
 /* Kill main page hero-inner::after on service pages */
 .service-hero .hero-inner::after { display: none; }
