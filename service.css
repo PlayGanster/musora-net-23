@@ -5,26 +5,32 @@
 
 /* Hero — light style matching main page */
 .service-hero {
-    padding: 0;
+    padding: 60px 0 70px;
 }
 
 .service-hero .hero-inner::after {
     content: '';
     position: absolute;
-    top: -50px;
-    bottom: -60px;
-    right: 0;
-    left: 0;
-    background: url('assets/main.webp') right center/auto 100% no-repeat;
+    inset: 0;
+    background: url('assets/main.webp') center/cover no-repeat;
+    pointer-events: none;
+    z-index: -2;
+}
+
+.service-hero .hero-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.75);
     pointer-events: none;
     z-index: -1;
 }
 
 /* Per-service hero backgrounds */
-.hero-bitovoi .hero-inner::after  { background-image: url('assets/bitovoi-musor.webp'); }
-.hero-demontazh .hero-inner::after { background-image: url('assets/demontaz.webp'); }
+.hero-bitovoi .hero-inner::after   { background-image: url('assets/bitovoi-musor.webp'); }
+.hero-demontazh .hero-inner::after  { background-image: url('assets/demontaz.webp'); }
 .hero-posle-remonta .hero-inner::after { background-image: url('assets/posle-remonta.webp'); }
-.hero-s-dachi .hero-inner::after  { background-image: url('assets/s-dachi.webp'); }
+.hero-s-dachi .hero-inner::after   { background-image: url('assets/s-dachi.webp'); }
 .hero-staraya-mebel .hero-inner::after { background-image: url('assets/staraia-mebel.webp'); }
 .hero-stroitelniy .hero-inner::after  { background-image: url('assets/stroitelniy-musor.webp'); }
 
