@@ -393,6 +393,19 @@ ul {
     padding: 14px 24px;
 }
 
+.hero-form-sub {
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.hero-form-privacy {
+    font-size: 11px;
+    color: #aaa;
+    text-align: center;
+    line-height: 1.4;
+}
+
 .hero-badge {
     position: absolute;
     bottom: 20px;
