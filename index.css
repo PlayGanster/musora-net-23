@@ -1459,6 +1459,10 @@ ul {
         padding: 0 16px;
     }
 
+    .mobile-sticky-call {
+        display: block;
+    }
+
     .hero {
         padding: 30px 0 40px;
     }
